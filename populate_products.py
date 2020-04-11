@@ -1,0 +1,46 @@
+import os
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ASTORUN_store.settings')
+
+import django
+django.setup()
+
+## FAKER
+import random
+from shop.models import Category, Product, ProductImage
+from faker import Faker
+
+fakegen = Faker()
+categories = ['Головні убори', 'Світшоти', 'Штани']
+season = ['w', 's', 's/f', 'mlt']
+
+
+def add_category():
+    category = Category.objects.get_or_create(name=random.choice(categories))[0]
+    category.save()
+    return category
+
+
+def populate(N=15):
+    for entry in range(N):
+        category = add_category()
+
+        fake_name = fakegen.bothify(text='Product: ?????? - ###')
+        fake_description = fakegen.text()
+        fake_quantity = fakegen.pyint(min_value=0, max_value=30, step=1)
+        fake_season = random.choice(season)
+        fake_price = fakegen.pydecimal(min_value=20, max_value=1000)
+
+        Product.objects.get_or_create(
+            category=category,
+            name=fake_name,
+            description=fake_description,
+            quantity=fake_quantity,
+            season=fake_season,
+            current_price=fake_price
+        )
+
+
+if __name__ == '__main__':
+    print("Populating!")
+    populate(30)
+    print("Population complete!")
