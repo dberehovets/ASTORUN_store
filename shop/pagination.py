@@ -1,24 +1,24 @@
+from django.core.paginator import Paginator, EmptyPage
+from shop.serializers import ProductSerializer
 
 
-class PaginationHandlerMixin(object):
-    @property
-    def paginator(self):
-        if not hasattr(self, '_paginator'):
-            if self.pagination_class is None:
-                self._paginator = None
-            else:
-                self._paginator = self.pagination_class()
-        else:
-            pass
-        return self._paginator
+class ProductPagination:
 
-    def paginate_queryset(self, queryset):
+    def get_page(self, request, products):
+        page_number = request.data.get('page_number', 1)
+        page_size = request.data.get('page_size', 10)
 
-        if self.paginator is None:
+        paginator = Paginator(products, page_size)
+        try:
+            page = ProductSerializer(paginator.page(page_number), many=True).data
+        except EmptyPage:
             return None
-        return self.paginator.paginate_queryset(queryset,
-                                                self.request, view=self)
 
-    def get_paginated_response(self, data):
-        assert self.paginator is not None
-        return self.paginator.get_paginated_response(data)
+        result = {
+            "page": page_number,
+            "pages": paginator.num_pages,
+            "page_size": page_size,
+            "total_items": products.count(),
+            "results": page
+        }
+        return result

@@ -1,15 +1,10 @@
 from shop.models import Category, Product
 from shop.serializers import CategorySerializer, ProductSerializer
-from shop.pagination import PaginationHandlerMixin
+from shop.pagination import ProductPagination
 
 from rest_framework.views import APIView
 from rest_framework import generics, status
 from rest_framework.response import Response
-from rest_framework.pagination import PageNumberPagination
-
-
-class BasicPagination(PageNumberPagination):
-    page_size_query_param = 10
 
 
 class CategoryApiList(generics.ListAPIView):
@@ -20,21 +15,30 @@ class CategoryApiList(generics.ListAPIView):
     serializer_class = CategorySerializer
 
 
-class ProductApiList(APIView, PaginationHandlerMixin):
+class ProductApiList(APIView, ProductPagination):
     """
     API endpoint that allows to view products of a particular category by its id.
     """
-    pagination_class = BasicPagination
-    def get(self, request, category_pk, format=None):
-        category = generics.get_object_or_404(Category, pk=category_pk)
-        products = Product.objects.filter(category=category)
-        page = self.paginate_queryset(products)
-        if page:
-            serializer = self.get_paginated_response(ProductSerializer(page, many=True).data)
-        else:
-            serializer = ProductSerializer(products, many=True)
 
-        return Response(serializer.data, status=status.HTTP_200_OK)
+    def post(self, request, category_id, format=None):
+        category = generics.get_object_or_404(Category, pk=category_id)
+
+        if 'filter' in request.data:
+            filter = request.data['filter']
+            if 'ids' in filter:
+                ids = filter.pop('ids')
+                products = Product.objects.filter(category=category, id__in=ids, **filter).order_by("-id")
+            else:
+                products = Product.objects.filter(category=category, **filter).order_by("-id")
+        else:
+            products = Product.objects.filter(category=category).order_by("-id")
+
+        result = self.get_page(request, products)
+
+        if result:
+            return Response(result, status=status.HTTP_200_OK)
+        else:
+            return Response(status=status.HTTP_404_NOT_FOUND)
 
 
 class ProductApiDetail(generics.RetrieveAPIView):
