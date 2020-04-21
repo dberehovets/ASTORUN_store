@@ -20,8 +20,8 @@ class ProductApiList(APIView, ProductPagination):
     API endpoint that allows to view products of a particular category by its id.
     """
 
-    def post(self, request, category_id, format=None):
-        category = generics.get_object_or_404(Category, pk=category_id)
+    def post(self, request, pk, format=None):
+        category = generics.get_object_or_404(Category, pk=pk)
 
         if 'filter' in request.data:
             filter = request.data['filter']
