@@ -1,7 +1,9 @@
 from django.db import models
+from shop.constants import *
+from core.models import BaseModel
 
 
-class Category(models.Model):
+class Category(BaseModel):
     name = models.CharField(max_length=100, unique=True, verbose_name='Назва')
     main_image = models.ImageField(upload_to='images/categories/', blank=True, verbose_name='Картинка', default="images/not-found.png")
 
@@ -13,43 +15,38 @@ class Category(models.Model):
         verbose_name_plural = "Категорії"
 
 
-class Product(models.Model):
-    SIZE_CHOICES = (
-        ('xs', 'Extra Small'),
-        ('s', 'Small'),
-        ('m', 'Medium'),
-        ('l', 'Large'),
-        ('xl', 'Extra Large'),
-        ('xxl', 'Two Extra Large')
-    )
-    COLLECTION_CHOICES = (
-        ('w', 'Winter'),
-        ('s', 'Summer'),
-        ('s/f', 'Spring/Fall'),
-        ('mlt', 'Multi')
-    )
-    EXTRA_CHOICES = (
-        ('sale', 'Sale'),
-        ('new', 'New'),
-        ('hot', 'Hot'),
-    )
-    GENDER_CHOICES = (
-        ('men', 'Men'),
-        ('women', 'Women'),
-        ('kids', "Kids"),
-    )
+class Product(BaseModel):
 
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='products', verbose_name='Категорія')
     name = models.CharField(max_length=100, verbose_name='Назва', unique=True)
     description = models.TextField(blank=True, verbose_name='Описання')
-    main_image = models.ImageField(upload_to='images/products/main_images/', verbose_name='Основна картинка', default="images/not-found.png")
+    main_image = models.ImageField(upload_to='images/products/main_images/', verbose_name='Основна картинка',
+                                   default="images/not-found.png")
     quantity = models.PositiveIntegerField(null=True, default=5, verbose_name='Кількість')
-    collection = models.CharField(choices=COLLECTION_CHOICES, max_length=3, verbose_name='Колекція')
+    collection = models.PositiveSmallIntegerField(choices=COLLECTION_CHOICES, verbose_name='Колекція')
     price = models.DecimalField(verbose_name='Поточна ціна', max_digits=10, decimal_places=2)
-    old_price = models.DecimalField(null=True, blank=True, verbose_name='Стара ціна (до знижки)', max_digits=10, decimal_places=2)
-    gender = models.CharField(max_length=5, choices=GENDER_CHOICES, blank=True, verbose_name='Стать')
-    size = models.CharField(choices=SIZE_CHOICES, max_length=3, blank=True, verbose_name='Розмір даної одиниці')
-    product_extra = models.CharField(max_length=5, choices=EXTRA_CHOICES, blank=True, verbose_name='Мітка')
+    old_price = models.DecimalField(null=True, blank=True, verbose_name='Стара ціна (до знижки)', max_digits=10,
+                                    decimal_places=2)
+    gender = models.PositiveSmallIntegerField(choices=GENDER_CHOICES, blank=True, null=True, verbose_name='Стать')
+    size = models.PositiveSmallIntegerField(choices=SIZE_CHOICES, blank=True, null=True,
+                                            verbose_name='Розмір даної одиниці')
+    extra = models.PositiveSmallIntegerField(choices=EXTRA_CHOICES, blank=True, null=True, verbose_name='Мітка')
+
+    @property
+    def object_collection(self):
+        return self.get_choice_object(self.collection, COLLECTION_CHOICES)
+
+    @property
+    def object_gender(self):
+        return self.get_choice_object(self.gender, GENDER_CHOICES)
+
+    @property
+    def object_size(self):
+        return self.get_choice_object(self.size, SIZE_CHOICES)
+
+    @property
+    def object_extra(self):
+        return self.get_choice_object(self.extra, EXTRA_CHOICES)
 
     def __str__(self):
         return self.name

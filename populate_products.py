@@ -6,12 +6,12 @@ django.setup()
 
 ## FAKER
 import random
-from shop.models import Category, Product, ProductImage
+from shop.models import Category, Product
 from faker import Faker
 
 fakegen = Faker()
 categories = ['Головні убори', 'Світшоти', 'Штани']
-season = ['w', 's', 's/f', 'mlt']
+season = [0, 1, 2, 3]
 
 
 def add_category():
@@ -35,8 +35,8 @@ def populate(N=15):
             name=fake_name,
             description=fake_description,
             quantity=fake_quantity,
-            season=fake_season,
-            current_price=fake_price
+            collection=fake_season,
+            price=fake_price
         )
 
 
