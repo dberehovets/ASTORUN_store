@@ -4,8 +4,8 @@
 *.xlsx
 .idea/*
 nginx/*
-#static/
-#media/
+static/
+media/
 venv/
 .installed.cfg
 local_settings.py
