@@ -23,14 +23,12 @@ class Command(createsuperuser.Command):
                 email=email,
                 password=make_password(password),
                 name='ADMIN',
-                role=1,
                 is_staff=True,
                 is_superuser=True
             )
         else:
             user.password = make_password(password)
             user.name = 'ADMIN'
-            user.role = 1
             user.is_staff = True
             user.is_superuser = True
             user.save()
