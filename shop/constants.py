@@ -26,14 +26,14 @@ COLLECTION_CHOICES = (
     (MULTI_SEASON_COLLECTION, 'Multi Season')
 )
 
-EXTRA_SALE = 0
-EXTRA_NEW = 1
-EXTRA_HOT = 2
+LABEL_SALE = 0
+LABEL_NEW = 1
+LABEL_HOT = 2
 
-EXTRA_CHOICES = (
-    (EXTRA_SALE, 'Sale'),
-    (EXTRA_NEW, 'New'),
-    (EXTRA_HOT, 'Hot'),
+LABELS = (
+    (LABEL_SALE, 'Sale'),
+    (LABEL_NEW, 'New'),
+    (LABEL_HOT, 'Hot'),
 )
 
 GENDER_MEN = 0

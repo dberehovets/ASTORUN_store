@@ -12,7 +12,7 @@ class ProductSerializer(serializers.ModelSerializer):
     collection = serializers.SerializerMethodField()
     gender = serializers.SerializerMethodField()
     size = serializers.SerializerMethodField()
-    extra = serializers.SerializerMethodField()
+    label = serializers.SerializerMethodField()
 
     class Meta:
         model = Product
@@ -27,7 +27,7 @@ class ProductSerializer(serializers.ModelSerializer):
                   'old_price',
                   'gender',
                   'size',
-                  'extra'
+                  'label'
                   )
 
     def get_collection(self, obj):
@@ -39,5 +39,5 @@ class ProductSerializer(serializers.ModelSerializer):
     def get_size(self, obj):
         return obj.object_size
 
-    def get_extra(self, obj):
-        return obj.object_extra
+    def get_label(self, obj):
+        return obj.object_label

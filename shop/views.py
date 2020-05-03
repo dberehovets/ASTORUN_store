@@ -14,20 +14,13 @@ class CategoryApiList(generics.ListAPIView):
 
 class ProductApiList(APIView, CustomPagination):
 
-    # def get(self, request, pk, format=None):
-    #     category = generics.get_object_or_404(Category, pk=pk)
-    #     products = Product.objects.filter(category=category).order_by("-created")
-    #     results = ProductSerializer(products, many=True).data
-    #     return Response(results)
-
-    def post(self, request, pk, format=None):
-        category = generics.get_object_or_404(Category, pk=pk)
+    def post(self, request, category_id, format=None):
 
         if 'filter' in request.data:
-            filter = request.data['filter']
-            products = Product.objects.filter(category=category, **filter).order_by("-created")
+            filtr = request.data['filter']
+            products = Product.objects.filter(category__id=category_id, **filtr).order_by("-created")
         else:
-            products = Product.objects.filter(category=category).order_by("-created")
+            products = Product.objects.filter(category__id=category_id).order_by("-created")
 
         result = self.get_page(request, products)
 

@@ -4,33 +4,30 @@ from core.models import BaseModel
 
 
 class Category(BaseModel):
-    name = models.CharField(max_length=100, unique=True, verbose_name='Назва')
-    main_image = models.ImageField(upload_to='images/categories/', blank=True, verbose_name='Картинка', default="images/not-found.png")
+    name = models.CharField(max_length=100, unique=True)
+    main_image = models.ImageField(upload_to='images/categories/', blank=True, default="images/not-found.png")
 
     def __str__(self):
         return self.name
 
     class Meta:
-        verbose_name = "Категорія"
-        verbose_name_plural = "Категорії"
+        verbose_name_plural = "Categories"
 
 
 class Product(BaseModel):
 
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='products', verbose_name='Категорія')
-    name = models.CharField(max_length=100, verbose_name='Назва', unique=True)
-    description = models.TextField(blank=True, verbose_name='Описання')
-    main_image = models.ImageField(upload_to='images/products/main_images/', verbose_name='Основна картинка',
-                                   default="images/not-found.png")
-    quantity = models.PositiveIntegerField(null=True, default=5, verbose_name='Кількість')
-    collection = models.PositiveSmallIntegerField(choices=COLLECTION_CHOICES, verbose_name='Колекція')
-    price = models.DecimalField(verbose_name='Поточна ціна', max_digits=10, decimal_places=2)
-    old_price = models.DecimalField(null=True, blank=True, verbose_name='Стара ціна (до знижки)', max_digits=10,
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='products')
+    name = models.CharField(max_length=100, unique=True)
+    description = models.TextField(blank=True)
+    main_image = models.ImageField(upload_to='images/products/main_images/', default="images/not-found.png")
+    quantity = models.PositiveIntegerField(null=True, default=5)
+    collection = models.PositiveSmallIntegerField(choices=COLLECTION_CHOICES)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    old_price = models.DecimalField(null=True, blank=True, max_digits=10,
                                     decimal_places=2)
-    gender = models.PositiveSmallIntegerField(choices=GENDER_CHOICES, blank=True, null=True, verbose_name='Стать')
-    size = models.PositiveSmallIntegerField(choices=SIZE_CHOICES, blank=True, null=True,
-                                            verbose_name='Розмір даної одиниці')
-    extra = models.PositiveSmallIntegerField(choices=EXTRA_CHOICES, blank=True, null=True, verbose_name='Мітка')
+    gender = models.PositiveSmallIntegerField(choices=GENDER_CHOICES, blank=True, null=True)
+    size = models.PositiveSmallIntegerField(choices=SIZE_CHOICES, blank=True, null=True)
+    label = models.PositiveSmallIntegerField(choices=LABELS, blank=True, null=True)
 
     @property
     def object_collection(self):
@@ -45,15 +42,11 @@ class Product(BaseModel):
         return self.get_choice_object(self.size, SIZE_CHOICES)
 
     @property
-    def object_extra(self):
-        return self.get_choice_object(self.extra, EXTRA_CHOICES)
+    def object_label(self):
+        return self.get_choice_object(self.label, LABELS)
 
     def __str__(self):
         return self.name
-
-    class Meta:
-        verbose_name = "Продукт"
-        verbose_name_plural = "Продукти"
 
 
 class ProductImage(models.Model):
@@ -65,5 +58,5 @@ class ProductImage(models.Model):
         return image_name
 
     class Meta:
-        verbose_name = "Додаткова картинка"
-        verbose_name_plural = "Додаткові картинки"
+        verbose_name = "Additional image"
+        verbose_name_plural = "Additional images"
