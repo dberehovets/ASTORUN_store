@@ -5,7 +5,7 @@ from core.models import BaseModel
 
 class Category(BaseModel):
     name = models.CharField(max_length=100, unique=True)
-    main_image = models.ImageField(upload_to='images/categories/', blank=True, default="images/not-found.png")
+    main_image = models.ImageField(upload_to='images/categories/', blank=True, default="No image")
 
     def __str__(self):
         return self.name
@@ -19,7 +19,7 @@ class Product(BaseModel):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='products')
     name = models.CharField(max_length=100, unique=True)
     description = models.TextField(blank=True)
-    main_image = models.ImageField(upload_to='images/products/main_images/', default="images/not-found.png")
+    main_image = models.ImageField(upload_to='images/products/main_images/', default="No image")
     quantity = models.PositiveIntegerField(null=True, default=5)
     collection = models.PositiveSmallIntegerField(choices=COLLECTION_CHOICES)
     price = models.DecimalField(max_digits=10, decimal_places=2)
