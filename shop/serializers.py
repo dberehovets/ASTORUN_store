@@ -27,7 +27,7 @@ class ProductSerializer(serializers.ModelSerializer):
                   'old_price',
                   'gender',
                   'size',
-                  'label'
+                  'label',
                   )
 
     def get_collection(self, obj):
