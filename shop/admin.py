@@ -41,7 +41,7 @@ class ProductAdmin(admin.ModelAdmin):
 
     list_filter = ['category', 'label', 'collection', 'gender']
 
-    list_display = ['name', 'old_price', 'price', 'category', 'main_image']
+    list_display = ['name', 'old_price', 'price', 'category', 'main_image', 'quantity']
 
     inlines = [ProductImagesInline, ProductSizesInline]
 
@@ -52,5 +52,11 @@ class OrderItemInline(admin.StackedInline):
 
 @admin.register(models.Order)
 class OrderAdmin(admin.ModelAdmin):
+
     list_filter = ['sent']
+
+    list_display = ['__str__', 'sent']
+
+    list_editable = ['sent']
+
     inlines = [OrderItemInline]

@@ -30,6 +30,15 @@ class Product(BaseModel):
     label = models.PositiveSmallIntegerField(choices=LABELS, blank=True, null=True)
 
     @property
+    def quantity(self):
+        quantity = 0
+        sizes = self.sizes.all()
+        if sizes:
+            for size in sizes:
+                quantity += size.quantity
+        return quantity
+
+    @property
     def object_collection(self):
         return self.get_choice_object(self.collection, COLLECTION_CHOICES)
 
@@ -81,7 +90,7 @@ class Order(BaseModel):
     sent = models.BooleanField(default=False)
 
     def __str__(self):
-        return str(self.created.date())
+        return str(self.created.date()) + " " + str(self.created.time()).split(".")[0]
 
 
 class OrderItem(BaseModel):
