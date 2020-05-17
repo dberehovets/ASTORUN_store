@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from django.db import models
 from shop.constants import *
 from core.models import BaseModel
@@ -20,13 +21,11 @@ class Product(BaseModel):
     name = models.CharField(max_length=100, unique=True)
     description = models.TextField(blank=True)
     main_image = models.ImageField(upload_to='images/products/main_images/', null=True, default=None)
-    quantity = models.PositiveIntegerField(null=True, default=5)
     collection = models.PositiveSmallIntegerField(choices=COLLECTION_CHOICES)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     old_price = models.DecimalField(null=True, blank=True, max_digits=10,
                                     decimal_places=2)
     gender = models.PositiveSmallIntegerField(choices=GENDER_CHOICES, blank=True, null=True)
-    size = models.PositiveSmallIntegerField(choices=SIZE_CHOICES, blank=True, null=True)
     label = models.PositiveSmallIntegerField(choices=LABELS, blank=True, null=True)
 
     @property
@@ -38,10 +37,6 @@ class Product(BaseModel):
         return self.get_choice_object(self.gender, GENDER_CHOICES)
 
     @property
-    def object_size(self):
-        return self.get_choice_object(self.size, SIZE_CHOICES)
-
-    @property
     def object_label(self):
         return self.get_choice_object(self.label, LABELS)
 
@@ -49,7 +44,7 @@ class Product(BaseModel):
         return self.name
 
 
-class ProductImage(models.Model):
+class ProductImage(BaseModel):
     product = models.ForeignKey(Product, related_name='images', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='images/products/', null=True, default=None)
 
@@ -60,3 +55,17 @@ class ProductImage(models.Model):
     class Meta:
         verbose_name = "Additional image"
         verbose_name_plural = "Additional images"
+
+
+class ProductSize(BaseModel):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='sizes')
+    name = models.PositiveSmallIntegerField(choices=SIZE_CHOICES)
+    quantity = models.PositiveIntegerField(null=True)
+
+    @property
+    def object_name(self):
+        return self.get_choice_object(self.name, SIZE_CHOICES)
+
+    class Meta:
+        verbose_name = "Size"
+        verbose_name_plural = "Sizes"

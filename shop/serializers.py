@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from shop.models import Category, Product, ProductImage
+from shop.models import Category, Product, ProductImage, ProductSize
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -11,7 +11,6 @@ class CategorySerializer(serializers.ModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     collection = serializers.SerializerMethodField()
     gender = serializers.SerializerMethodField()
-    size = serializers.SerializerMethodField()
     label = serializers.SerializerMethodField()
 
     class Meta:
@@ -36,8 +35,22 @@ class ProductSerializer(serializers.ModelSerializer):
     def get_gender(self, obj):
         return obj.object_gender
 
-    def get_size(self, obj):
-        return obj.object_size
-
     def get_label(self, obj):
         return obj.object_label
+
+
+class ProductImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProductImage
+        fields = ('product', 'image')
+
+
+class ProductSizeSerializer(serializers.ModelSerializer):
+    name = serializers.SerializerMethodField()
+
+    class Meta:
+        model = ProductSize
+        fields = ('product', 'name', 'quantity')
+
+    def get_name(self, obj):
+        return obj.object_name

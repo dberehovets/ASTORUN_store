@@ -26,7 +26,6 @@ def populate(N=15):
 
         fake_name = fakegen.bothify(text='Product: ?????? - ###')
         fake_description = fakegen.text()
-        fake_quantity = fakegen.pyint(min_value=0, max_value=30, step=1)
         fake_season = random.choice(season)
         fake_price = fakegen.pydecimal(min_value=20, max_value=1000)
 
@@ -34,7 +33,6 @@ def populate(N=15):
             category=category,
             name=fake_name,
             description=fake_description,
-            quantity=fake_quantity,
             collection=fake_season,
             price=fake_price
         )
