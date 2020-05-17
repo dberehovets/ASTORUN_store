@@ -46,3 +46,11 @@ class ProductAdmin(admin.ModelAdmin):
     inlines = [ProductImagesInline, ProductSizesInline]
 
 
+class OrderItemInline(admin.StackedInline):
+    model = models.OrderItem
+
+
+@admin.register(models.Order)
+class OrderAdmin(admin.ModelAdmin):
+    list_filter = ['sent']
+    inlines = [OrderItemInline]

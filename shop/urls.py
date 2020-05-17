@@ -9,5 +9,8 @@ router.register('categories', viewsets.CategoryViewSet)
 router.register('products', viewsets.ProductViewSet)
 router.register('images', viewsets.ProductImageViewSet)
 router.register('sizes', viewsets.ProductSizeViewSet)
+router.register('orders', viewsets.OrderViewSet)
 
-urlpatterns = router.urls
+urlpatterns = [
+    path("order_items/", viewsets.OrderItemView.as_view())
+] + router.urls

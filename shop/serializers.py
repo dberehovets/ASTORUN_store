@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from shop.models import Category, Product, ProductImage, ProductSize
+from rest_framework.exceptions import ValidationError
+from shop.models import Category, Product, ProductImage, ProductSize, Order, OrderItem
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -20,12 +21,10 @@ class ProductSerializer(serializers.ModelSerializer):
                   'name',
                   'description',
                   'main_image',
-                  'quantity',
                   'collection',
                   'price',
                   'old_price',
                   'gender',
-                  'size',
                   'label',
                   )
 
@@ -50,7 +49,43 @@ class ProductSizeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ProductSize
-        fields = ('product', 'name', 'quantity')
+        fields = ('id', 'product', 'name', 'quantity')
 
     def get_name(self, obj):
         return obj.object_name
+
+
+class OrderSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Order
+        fields = ('id', 'user', 'anonymous')
+
+    def validate(self, attrs):
+        user = attrs.get('user', None)
+        anon = attrs.get('anonymous', None)
+        if not user and not anon:
+            raise ValidationError("Please provide information about the user!")
+        return attrs
+
+
+class OrderItemSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = OrderItem
+        fields = ('id', 'item', 'order', 'quantity')
+
+    def validate(self, attrs):
+
+        item_quantity = attrs['item'].quantity
+
+        if attrs['quantity'] > item_quantity:
+            raise ValidationError("Order quantity is higher than the amount of the product in stock!")
+
+        return attrs
+
+    def save(self, **kwargs):
+        size_item = self.validated_data.get('item')
+        size_item.quantity -= self.validated_data.get('quantity')
+        size_item.save()
+        return super().save(**kwargs)

@@ -2,6 +2,7 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from shop.constants import *
 from core.models import BaseModel
+from accounts.models import User
 
 
 class Category(BaseModel):
@@ -69,3 +70,24 @@ class ProductSize(BaseModel):
     class Meta:
         verbose_name = "Size"
         verbose_name_plural = "Sizes"
+
+    def __str__(self):
+        return self.product.name
+
+
+class Order(BaseModel):
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True, null=True)
+    anonymous = models.TextField(max_length=4000, blank=True, null=True)
+    sent = models.BooleanField(default=False)
+
+    def __str__(self):
+        return str(self.created.date())
+
+
+class OrderItem(BaseModel):
+    item = models.ForeignKey(ProductSize, on_delete=models.SET_NULL, null=True)
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
+    quantity = models.PositiveSmallIntegerField(default=1)
+
+    def __str__(self):
+        return str(self.quantity) + " of " + self.item.product.name
