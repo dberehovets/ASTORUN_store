@@ -2,6 +2,9 @@ from django.contrib import admin
 from django import forms
 from django.core.exceptions import ValidationError
 from shop import models
+from import_export.admin import ExportActionMixin
+from import_export.formats.base_formats import XLS, XLSX
+from import_export import resources
 
 
 admin.site.register(models.Category)
@@ -34,8 +37,16 @@ class ProductSizesInline(admin.StackedInline):
     form = ProductSizesInlineForm
 
 
+class ProductResource(resources.ModelResource):
+
+    class Meta:
+        model = models.Product
+        fields = ['name', 'old_price', 'price', 'main_image', 'quantity']
+
+
 @admin.register(models.Product)
-class ProductAdmin(admin.ModelAdmin):
+class ProductAdmin(ExportActionMixin, admin.ModelAdmin):
+    formats = (XLS, XLSX)
 
     search_fields = ['name']
 
@@ -44,6 +55,8 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = ['name', 'old_price', 'price', 'category', 'main_image', 'quantity']
 
     inlines = [ProductImagesInline, ProductSizesInline]
+
+    resource_class = ProductResource
 
 
 class OrderItemInline(admin.StackedInline):
