@@ -23,7 +23,7 @@ class ProductViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.
     filterset_class = ProductFilter
 
     def get_queryset(self):
-        return Product.objects.filter(sizes__isnull=False).order_by("-created")
+        return Product.objects.all().exclude(sizes=None).order_by("-created")
 
 
 class ProductImageViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
