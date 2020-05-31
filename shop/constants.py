@@ -6,12 +6,12 @@ XL_SIZE = 4
 XXL_SIZE = 5
 
 SIZE_CHOICES = (
-    (XS_SIZE, 'Extra Small'),
-    (S_SIZE, 'Small'),
-    (M_SIZE, 'Medium'),
-    (L_SIZE, 'Large'),
-    (XL_SIZE, 'Extra Large'),
-    (XXL_SIZE, 'Two Extra Large')
+    (XS_SIZE, 'XS'),
+    (S_SIZE, 'S'),
+    (M_SIZE, 'M'),
+    (L_SIZE, 'L'),
+    (XL_SIZE, 'XL'),
+    (XXL_SIZE, 'XXL')
 )
 
 WINTER_COLLECTION = 0

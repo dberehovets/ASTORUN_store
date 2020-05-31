@@ -8,6 +8,7 @@ from shop.filters import ProductFilter, ProductImageFilter, ProductSizeFilter
 from rest_framework import mixins, viewsets, status
 from rest_framework.views import APIView
 from django_filters import rest_framework as filter
+from rest_framework.decorators import action
 
 
 class CategoryViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
@@ -24,6 +25,21 @@ class ProductViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.
 
     def get_queryset(self):
         return Product.objects.all().exclude(sizes=None).order_by("-created")
+
+    @action(methods=['POST'], detail=False)
+    def by_ids(self, request):
+        ids = request.data.get('ids', None)
+        if not ids:
+            return Response("Ids were not provided!", status=status.HTTP_400_BAD_REQUEST)
+
+        products = Product.objects.filter(id__in=ids)
+
+        if not products:
+            return Response("Sizes were not found.")
+
+        result = ProductSerializer(products, many=True).data
+
+        return Response(result, status=status.HTTP_200_OK)
 
 
 class ProductImageViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
@@ -42,6 +58,21 @@ class ProductSizeViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
 
     def get_queryset(self):
         return super(ProductSizeViewSet, self).get_queryset().filter(quantity__gt=0)
+
+    @action(methods=['POST'], detail=False)
+    def by_ids(self, request):
+        ids = request.data.get('ids', None)
+        if not ids:
+            return Response("Ids were not provided!", status=status.HTTP_400_BAD_REQUEST)
+
+        sizes = ProductSize.objects.filter(id__in=ids)
+
+        if not sizes:
+            return Response("Sizes were not found.")
+
+        result = ProductSizeSerializer(sizes, many=True).data
+
+        return Response(result, status=status.HTTP_200_OK)
 
 
 class OrderViewSet(viewsets.GenericViewSet, mixins.CreateModelMixin, mixins.RetrieveModelMixin):
