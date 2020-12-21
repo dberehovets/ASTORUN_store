@@ -110,7 +110,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'astorun',
         'USER': 'astorun',
-        'PASSWORD': 'astorun',
+        'PASSWORD': 'astorun2020',
         'HOST': 'localhost',
         'PORT': '5432',
     }

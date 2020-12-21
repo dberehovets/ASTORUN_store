@@ -2,7 +2,7 @@
 *.pyo
 *.db
 *.xlsx
-.idea/*
+# .idea/*
 nginx/*
 static/
 media/
