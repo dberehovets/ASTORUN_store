@@ -2,11 +2,12 @@
 *.pyo
 *.db
 *.xlsx
-# .idea/*
+.idea/*
 nginx/*
 static/
 media/
 venv/
+__pycache__
 .installed.cfg
 local_settings.py
 commands.txt

@@ -26,7 +26,7 @@ SECRET_KEY = 'r4tbilq@b58=&mk(6jvtvshb_)&$ag%4!qo1_b6svjo-u6^x21'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['35.246.141.227', '127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0']
 
 
 # Application definition
@@ -40,8 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'django_filters',
-    'shop',
-    'accounts',
+    'user',
+    'product',
+    'collection',
+    'order',
     'import_export',
     'django_cleanup',
     # 'corsheaders',
@@ -107,12 +109,12 @@ WSGI_APPLICATION = 'ASTORUN_store.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'astorun',
-        'USER': 'astorun',
-        'PASSWORD': 'astorun2020',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        "ENGINE": os.environ.get("DB_ENGINE", "django.db.backends.postgresql_psycopg2"),
+        "NAME": os.environ.get("DB_NAME", "astorun"),
+        "USER": os.environ.get("DB_USER", "astorun"),
+        "PASSWORD": os.environ.get("DB_PASSWORD", "astorun2020"),
+        "HOST": os.environ.get("DB_HOST", "localhost"),
+        "PORT": os.environ.get("DB_PORT", "5432"),
     }
 }
 
@@ -151,12 +153,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/api/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 
 # MEDIA FILES
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+MEDIA_URL = '/api/media/'
 
-AUTH_USER_MODEL = 'accounts.User'
+AUTH_USER_MODEL = 'user.User'
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
