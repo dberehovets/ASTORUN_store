@@ -1,5 +1,3 @@
-from django_filters import rest_framework as filter
-from rest_framework.filters import OrderingFilter
 from rest_framework import permissions, viewsets, mixins
 
 from .models import Collection
