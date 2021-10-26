@@ -1,5 +1,18 @@
 version: '3.7'
 services:
+  frontend:
+    restart: always
+    command: npm start
+    container_name: front
+    build:
+      context: ./frontend/
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    depends_on:
+      - web
+
   web:
     build: ./
     command: python manage.py runserver 0.0.0.0:8000

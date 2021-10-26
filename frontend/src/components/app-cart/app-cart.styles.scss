@@ -1,0 +1,43 @@
+@import "../../assets/styles/tools/tools";
+
+.app-cart {
+  .app-cart-overlay {
+    justify-content: flex-end;
+  }
+
+  .app-cart-paper {
+    margin: 0;
+    height: 100vh;
+    max-height: unset;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .app-cart-title {
+    position: relative;
+    background-color: $main-color;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .app-cart-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: center;
+    margin: auto 0 20px 0;
+  }
+
+  .app-cart__close {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "links": {
+    "shop": "Shop",
+    "news": "News",
+    "collection": "Collection",
+    "contacts": "Contacts",
+    "faq": "FAQ",
+    "rules": "Rules",
+    "partner": "Partnership",
+    "offer": "Offer"
+  },
+  "page": {
+    "shop": {
+      "title": "Our collections"
+    },
+    "products": {
+      "title": "Our products",
+      "no_products": "Sorry, we have no products in this collection"
+    },
+    "cart": {
+      "title": "The goods in your cart",
+      "placeholder": "There are no goods in your cart yet"
+    },
+    "checkout": {
+      "title": "Checkout",
+      "total": "Total"
+    }
+  },
+  "collections": {
+    "hats": "Hats",
+    "mens": "Men's"
+  },
+  "actions": {
+    "shop_now": "Shop now",
+    "add_to_cart": "ADd to cart",
+    "go_to_checkout": "Go to checkout",
+    "go_shop": "Go shop",
+    "send_my_order": "Send my order"
+  },
+  "label": {
+    "size": "Size",
+    "price": "Price",
+    "quantity": "Quantity",
+    "first_name": "First name",
+    "last_name": "Last name",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "city": "City"
+  },
+  "form": {
+    "checkout": {
+      "title": "Leave your contacts for us"
+    }
+  },
+  "error": {
+    "is_required": "The field is required",
+    "invalid_email": "Invalid email"
+  }
+}

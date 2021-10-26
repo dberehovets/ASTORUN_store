@@ -16,3 +16,5 @@ commands.txt
 *.dat
 *.dir
 *.rdb
+node_modules
+.idea
