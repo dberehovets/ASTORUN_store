@@ -112,7 +112,7 @@ DATABASES = {
         "ENGINE": os.environ.get("DB_ENGINE", "django.db.backends.postgresql_psycopg2"),
         "NAME": os.environ.get("DB_NAME", "astorun"),
         "USER": os.environ.get("DB_USER", "astorun"),
-        "PASSWORD": os.environ.get("DB_PASSWORD", "astorun2020"),
+        "PASSWORD": os.environ.get("DB_PASSWORD", "!fdFDS34fd23f23f"),
         "HOST": os.environ.get("DB_HOST", "localhost"),
         "PORT": os.environ.get("DB_PORT", "5432"),
     }
