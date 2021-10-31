@@ -46,12 +46,12 @@ INSTALLED_APPS = [
     'order',
     'import_export',
     'django_cleanup',
-    # 'corsheaders',
+    'corsheaders',
 
 ]
 
 MIDDLEWARE = [
-    # 'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
