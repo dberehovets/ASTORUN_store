@@ -1,6 +1,6 @@
 # build environment
 FROM node:10 AS builder
-WORKDIR /app
+WORKDIR /usr/src/app/frontend
 # Copy all files from current directory to working dir in image
 COPY . .
 # install node modules and build assets
@@ -13,6 +13,6 @@ WORKDIR /usr/share/nginx/html
 # Remove default nginx static assets
 RUN rm -rf ./*
 # Copy static assets from builder stage
-COPY --from=builder /app/build .
+COPY --from=builder /usr/src/app/frontend/build .
 # Containers run nginx with global directives and daemon off
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
