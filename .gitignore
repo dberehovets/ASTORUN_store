@@ -4,7 +4,7 @@
 *.xlsx
 .idea/*
 nginx/*
-static/
+/static/
 media/
 venv/
 __pycache__
