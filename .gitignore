@@ -5,7 +5,7 @@
 .idea/*
 nginx/*
 /static/
-media/
+/media/
 venv/
 __pycache__
 .installed.cfg
