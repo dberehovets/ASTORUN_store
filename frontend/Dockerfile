@@ -4,7 +4,12 @@ WORKDIR /usr/src/app/frontend
 # Copy all files from current directory to working dir in image
 COPY . .
 # install node modules and build assets
-RUN npm i && npm run build
+RUN npm i
+
+ARG REACT_APP_BASE_URL
+ENV REACT_APP_BASE_URL $REACT_APP_BASE_URL
+
+RUN npm run build
 
 # nginx state for serving content
 FROM nginx:alpine

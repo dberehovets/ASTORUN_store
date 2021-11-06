@@ -3,7 +3,7 @@ interface IAppConfig {
 }
 
 const AppConfig: IAppConfig = {
-  baseURL: '/api',
+  baseURL: process.env.REACT_APP_BASE_URL || '/api',
 };
 
 export default AppConfig;

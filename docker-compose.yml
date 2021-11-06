@@ -3,7 +3,10 @@ services:
   frontend:
     restart: always
     container_name: astorun_store_frontend
-    build: ./frontend
+    build:
+      context: ./frontend
+      args:
+        REACT_APP_BASE_URL: http://0.0.0.0:8000
     ports:
       - "8080:80"
     stdin_open: true
