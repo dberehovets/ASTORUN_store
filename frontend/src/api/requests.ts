@@ -21,7 +21,7 @@ export const getProducts = ({
   pageSize,
   collection,
 }: IGetProductsParams): TResponse<TProductsData> =>
-  api.get('/product/product/', {
+  api.get('/product/product', {
     params: { page, collection, page_size: pageSize },
   });
 
@@ -47,5 +47,5 @@ export const createOrder = ({
     phone,
   });
 
-export const getProductsByIds = (ids: string[]): unknown =>
+export const getProductsByIds = (ids: string[]): TResponse<TProducts> =>
   api.post('/product/product/by-ids/', { ids });

@@ -28,7 +28,9 @@
   },
   "collections": {
     "hats": "Hats",
-    "mens": "Men's"
+    "men": "Men's",
+    "woman": "Women's",
+    "children": "Children's"
   },
   "actions": {
     "shop_now": "Shop now",

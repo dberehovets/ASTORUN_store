@@ -7,6 +7,7 @@ import { TStoredCartItems } from '../../types/storage.types';
 import { addNotification } from '../notifications/notifications.actions';
 import { loadCartFailureAction, loadCartSuccessAction } from './cart.actions';
 import { LOAD_CART_START } from './cart.types';
+import { formCartItems } from './cart.utils';
 
 function* loadCart() {
   try {
@@ -19,16 +20,21 @@ function* loadCart() {
       return;
     }
 
+    console.log('storedCartItems:', storedCartItems);
     const productIds = storedCartItems.map(({ id }) => id);
+    // eslint-disable-next-line
+    // @ts-ignore
+    const uniqProductIds = [...new Set(productIds)];
 
-    const productsResponses = yield getProductsByIds(productIds);
+    const response = yield getProductsByIds(uniqProductIds);
 
-    console.log('productsResponses:', productsResponses);
-    // const products = productsResponses.map(({ data }) => data);
-    //
-    // const cartItems = formCartItems(storedCartItems, products);
-    //
-    // yield put(loadCartSuccessAction(cartItems));
+    const products = response.data;
+
+    console.log('products:', products);
+    const cartItems = formCartItems(storedCartItems, products);
+
+    console.log('cartItems:', cartItems);
+    yield put(loadCartSuccessAction(cartItems));
   } catch (e) {
     yield put(loadCartFailureAction(e));
     yield put(

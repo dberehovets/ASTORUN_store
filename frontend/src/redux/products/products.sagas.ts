@@ -9,6 +9,9 @@ import {
   FetchProductsStartAction,
 } from './products.types';
 
+const calcTotalPages = (totalProductsCount: number, productsPageSize: number) =>
+  Math.ceil(totalProductsCount / productsPageSize);
+
 function* fetchProducts({ payload }: FetchProductsStartAction) {
   try {
     // TODO: Add collection name to search products params
@@ -20,14 +23,14 @@ function* fetchProducts({ payload }: FetchProductsStartAction) {
 
     const { data } = yield call(getProducts, {
       ...payload,
-      collection: collection?.id,
+      collection: collection?.name,
     });
 
     const { count, results } = data as TProductsData;
 
     yield put(
       fetchProductsSuccess({
-        pages: count,
+        pages: calcTotalPages(count, payload.pageSize),
         products: results,
       })
     );

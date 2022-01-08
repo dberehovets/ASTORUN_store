@@ -28,7 +28,9 @@
   },
   "collections": {
     "hats": "Кепки",
-    "mens": "Мужское"
+    "men": "Мужское",
+    "woman": "Женское",
+    "children": "Детское"
   },
   "actions": {
     "shop_now": "Смотреть",

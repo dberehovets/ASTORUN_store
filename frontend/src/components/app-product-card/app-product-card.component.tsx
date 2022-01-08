@@ -23,7 +23,7 @@ const AppProductCard = ({ product }: ICardProps): React.ReactElement => {
   const path = ProductDetailsRoute.getPath!(id);
 
   return (
-    <Link to={path}>
+    <Link to={path} className="app-product-card-wrapper">
       <Card raised className="app-product-card">
         <CardActionArea>
           <CardMedia

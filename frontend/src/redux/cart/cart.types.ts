@@ -22,9 +22,7 @@ export interface ICartItem extends IItemToAdd {
   quantity: number;
 }
 
-export interface ICartItems {
-  [key: string]: ICartItem;
-}
+export type ICartItems = Record<string, ICartItem>;
 
 export type ICartState = {
   isOpened: boolean;

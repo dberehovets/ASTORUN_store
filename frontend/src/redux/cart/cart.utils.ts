@@ -91,10 +91,17 @@ export const formCartItems = (
         return cartItemsStore;
       }
 
+      const mainImage =
+        product.images.find(({ isMain }) => isMain) || product.images?.[0];
+
       return {
+        ...cartItemsStore,
         [sizeId]: {
-          ...product,
+          id: product.id,
+          name: product.name,
+          imageUrl: mainImage?.url || '',
           selectedSize,
+          price: product.price,
           quantity,
         },
       };

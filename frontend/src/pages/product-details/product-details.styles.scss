@@ -5,6 +5,7 @@
   @media only screen and (max-width: 767px) {
     flex-direction: column;
   }
+
   &__info {
     margin-left: 20px;
     flex: 1;
@@ -35,19 +36,17 @@
 
   &__size-select {
     margin-left: auto;
+    margin-right: 20px;
+
     @media only screen and (max-width: 767px) {
       margin-left: 0;
-      margin-right: 20px;
     }
   }
 
   &__btn {
-    margin-left: 10px;
+    height: 56px;
     padding-top: 15px;
     padding-bottom: 15px;
-    @media only screen and (max-width: 767px) {
-      margin-left: 0;
-    }
   }
 
   &__description {

@@ -44,7 +44,7 @@ const ProductDetailsPage = (): React.ReactElement | null => {
 
   if (!product) return null;
 
-  const { id, name, price, description, images, sizes } = product;
+  const { id, name, price, description, images, sizes, image } = product;
 
   const sliderImages: string[] = images.map(({ url }) => url);
   const sizeNames: string[] = sizes.map(({ name: productName }) => productName);
@@ -57,7 +57,7 @@ const ProductDetailsPage = (): React.ReactElement | null => {
         id,
         selectedSize,
         name,
-        imageUrl: images.find(({ isMain }) => isMain)!.url,
+        imageUrl: image?.url || images.find(({ isMain }) => isMain)?.url || '',
         price: Number(price),
       })
     );

@@ -1,6 +1,10 @@
+.app-product-card-wrapper {
+  width: 312px;
+  height: 312px;
+  margin: 0 0 34px 24px;
+}
+
 .app-product-card {
-  max-width: 345px;
-  height: 345px;
   &.MuiPaper-rounded {
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;

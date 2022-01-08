@@ -44,13 +44,6 @@ export function handleValidate<V extends { [key: string]: string }>(
 
       const error = findedErrors.find(Boolean);
 
-      if (fieldName === 'email') {
-        console.log('fieldRules:', fieldRules);
-        console.log('fieldName:', fieldName);
-        console.log('fieldValue:', fieldValue);
-        console.log('findedErrors:', findedErrors);
-      }
-
       if (error) {
         return {
           ...errors,

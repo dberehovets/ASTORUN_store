@@ -6,6 +6,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'import/prefer-default-export': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
+    camelcase: 'off',
   },
   settings: {
     'import/resolver': {

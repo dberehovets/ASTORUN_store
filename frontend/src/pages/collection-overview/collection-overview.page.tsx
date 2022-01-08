@@ -36,7 +36,7 @@ const CollectionOverviewPage = ({
         fetchProductsStart({
           page,
           collection,
-          pageSize: 1,
+          pageSize: 9,
         })
       );
     },
@@ -47,7 +47,7 @@ const CollectionOverviewPage = ({
     <div className="container products-container">
       <h1 className="main-title">{t('page.products.title')}</h1>
 
-      <div>
+      <div className="products-overview">
         {products.map((product) => (
           <AppProductCard key={product.id} product={product} />
         ))}
