@@ -20,7 +20,6 @@ function* loadCart() {
       return;
     }
 
-    console.log('storedCartItems:', storedCartItems);
     const productIds = storedCartItems.map(({ id }) => id);
     // eslint-disable-next-line
     // @ts-ignore
@@ -30,10 +29,8 @@ function* loadCart() {
 
     const products = response.data;
 
-    console.log('products:', products);
     const cartItems = formCartItems(storedCartItems, products);
 
-    console.log('cartItems:', cartItems);
     yield put(loadCartSuccessAction(cartItems));
   } catch (e) {
     yield put(loadCartFailureAction(e));

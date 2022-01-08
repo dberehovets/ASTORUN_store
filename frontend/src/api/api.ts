@@ -49,7 +49,6 @@ api.interceptors.response.use((response) => {
 //   (response: AxiosResponse): AxiosResponse => ({
 //     ...response,
 //     data: Object.entries(response.data).reduce((data, [key, value]) => {
-//       console.log(key);
 //
 //       return {
 //         ...data,

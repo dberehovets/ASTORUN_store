@@ -1,29 +1,21 @@
 import { PaginationItem } from '@material-ui/lab';
-import React, { useEffect } from 'react';
+import React from 'react';
 import Pagination from '@material-ui/lab/Pagination';
 import { Link, useRouteMatch } from 'react-router-dom';
-import useQuery from '../../hooks/use-query.hook';
 
 interface IPaginationProps {
   count: number;
-  classes: {
-    [key: string]: string;
-  };
+  page: number;
+  classes: Record<string, string>;
   onChange: ({ page }: { page: number }) => void;
 }
 
 const AppPagination = ({
+  page,
   count,
   classes,
-  onChange,
 }: IPaginationProps): React.ReactElement => {
-  const query = useQuery();
-  const page: number = Number(query.get('page')) || 1;
   const { url } = useRouteMatch();
-
-  useEffect(() => {
-    onChange({ page });
-  }, [page, onChange]);
 
   return (
     <Pagination
